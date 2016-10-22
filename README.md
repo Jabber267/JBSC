@@ -1,2 +1,0 @@
-# JBSC
-Soundcloud desktop player
