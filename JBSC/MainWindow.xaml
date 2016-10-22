@@ -54,13 +54,13 @@
                     <Button.Effect>
                         <DropShadowEffect BlurRadius="3" ShadowDepth="3" Direction="0"/>
                     </Button.Effect>
-                    <Image x:Name="imgBtnBack" Source="C:\Users\Johann\Documents\Visual Studio 2015\Projects\JBSC\JBSC\images\1024x1024_ArrowButton.png" Height="30" Width="30"/>
+                    <Image x:Name="imgBtnBack" Source=".\images\1024x1024_ArrowButton.png" Height="30" Width="30"/>
                 </Button>
                 <Button x:Name="btnForward" Style="{DynamicResource CstmBtnOrangeHighlight}" Panel.ZIndex="4" Grid.Column="2" Grid.RowSpan="4" Grid.Row="1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnForward_Click">
                     <Button.Effect>
                         <DropShadowEffect BlurRadius="3" ShadowDepth="3" Direction="180"/>
                     </Button.Effect>
-                    <Image x:Name="imgBtnForward" Source="C:\Users\Johann\Documents\Visual Studio 2015\Projects\JBSC\JBSC\images\1024x1024_ArrowButton.png" Height="30" Width="30" RenderTransformOrigin="0.5,0.5">
+                    <Image x:Name="imgBtnForward" Source=".\images\1024x1024_ArrowButton.png" Height="30" Width="30" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -71,7 +71,7 @@
                         </Image.RenderTransform>
                     </Image>
                 </Button>
-                <Image x:Name="imgEmblem" Grid.RowSpan="6" Source="images/1024x1024_JBSC_Icon.png" Stretch="UniformToFill">
+                <Image x:Name="imgEmblem" Grid.RowSpan="6" Source=".\images\1024x1024_JBSC_Icon.png" Stretch="UniformToFill">
                     <Image.Effect>
                         <DropShadowEffect ShadowDepth="3" BlurRadius="15"/>
                     </Image.Effect>
@@ -138,7 +138,7 @@
                     </Grid>
                 </Border>
                 <Button x:Name="btnSearch" Style="{DynamicResource CstmBtnSearch}" HorizontalContentAlignment="Right" Background="{x:Null}" BorderBrush="{x:Null}" Panel.ZIndex="4" MinWidth="30" MaxWidth="30" Margin="0,2" Grid.RowSpan="3" Grid.Row="2" Grid.Column="1" MouseEnter="btnSearch_MouseEnter" MouseLeave="btnSearch_MouseLeave" Click="btnSearch_Click">
-                    <Image x:Name="imgBtnSearch" Source="images/800x600_ButtonMagnifyingGlass.png"/>
+                    <Image x:Name="imgBtnSearch" Source=".\images\800x600_ButtonMagnifyingGlass.png"/>
                 </Button>
             </Grid>
         </Grid>
@@ -181,8 +181,34 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                
+                <ColumnDefinition Width="170*" MaxWidth="400" MinWidth="170"/>
+                <ColumnDefinition Width="622*"/>
             </Grid.ColumnDefinitions>
+            <Grid x:Name="grdTrackControl" Grid.Row="2" MinWidth="170" MaxWidth="400">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnPrevious" Style="{DynamicResource CstmBtnNoHighlight}" BorderThickness="0" MinWidth="30" MinHeight="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseEnter="btnPrevious_MouseEnter" MouseLeave="btnPrevious_MouseLeave">
+                    <Image x:Name="imgBtnPrev" Source="images/1024x1024_NxtPtvTrack.png"/>
+                </Button>
+                <Button x:Name="btnPausePlay" Style="{DynamicResource CstmBtnNoHighlight}" BorderThickness="0" MinWidth="30" MinHeight="30" Grid.Column="1" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" MouseEnter="btnPausePlay_MouseEnter" MouseLeave="btnPausePlay_MouseLeave">
+                    <Image x:Name="imgBtnPP" Source="images/1024x1024_Play.png"/>
+                </Button>
+                <Button x:Name="btnNext" Style="{DynamicResource CstmBtnNoHighlight}" Margin="0" BorderThickness="0" MinWidth="30" MinHeight="30" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseEnter="btnNext_MouseEnter" MouseLeave="btnNext_MouseLeave">
+                    <Image x:Name="imgBtnNext" Source="images/1024x1024_NxtPtvTrack.png" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Button>
+            </Grid>
         </Grid>
         <Grid x:Name="grdMainPanel" Margin="0" Panel.ZIndex="3" Grid.Row="1" Grid.Column="1"/>
         <Canvas x:Name="cvsTopPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFFF6800" Grid.ColumnSpan="2" MinHeight="60" MaxHeight="60" Panel.ZIndex="2" MouseDown="cvsTopPanel_MouseDown">
@@ -196,7 +222,7 @@
                 <DropShadowEffect BlurRadius="15" ShadowDepth="15" Direction="360" Opacity="0.5"/>
             </Canvas.Effect>
         </Canvas>
-        <Canvas x:Name="cvsControlPanel" Grid.Column="0" Background="#FF7C3200" Panel.ZIndex="2" Grid.ColumnSpan="2" Grid.Row="2" MinHeight="60" MaxHeight="100" Margin="0,0,0,-1">
+        <Canvas x:Name="cvsControlPanel" Grid.Column="0" Background="#FFCA5100" Panel.ZIndex="2" Grid.ColumnSpan="2" Grid.Row="2" MinHeight="60" MaxHeight="100" Margin="0,0,0,-1">
             <Canvas.Effect>
                 <DropShadowEffect BlurRadius="15" Direction="90" ShadowDepth="15" Opacity="0.5"/>
             </Canvas.Effect>
@@ -212,7 +238,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
+
             </Grid>
         </Canvas>
     </Grid>

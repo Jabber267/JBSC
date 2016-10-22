@@ -116,6 +116,36 @@ namespace JBSC
                 this.Foreground = Brushes.Gray;
             }
         }
+
+        private void btnPrevious_MouseEnter(object sender, MouseEventArgs e)
+        {
+            imgBtnPrev.Source = new BitmapImage(new Uri(@"\images\1024x1024_NxtPtvTrackGlow.png", UriKind.Relative));
+        }
+
+        private void btnPrevious_MouseLeave(object sender, MouseEventArgs e)
+        {
+            imgBtnPrev.Source = new BitmapImage(new Uri(@"\images\1024x1024_NxtPtvTrack.png", UriKind.Relative));
+        }
+
+        private void btnPausePlay_MouseEnter(object sender, MouseEventArgs e)
+        {
+            imgBtnPP.Source = new BitmapImage(new Uri(@"\images\1024x1024_PlayGlow.png", UriKind.Relative));
+        }
+
+        private void btnPausePlay_MouseLeave(object sender, MouseEventArgs e)
+        {
+            imgBtnPP.Source = new BitmapImage(new Uri(@"\images\1024x1024_Play.png", UriKind.Relative));
+        }
+
+        private void btnNext_MouseEnter(object sender, MouseEventArgs e)
+        {
+            imgBtnNext.Source = new BitmapImage(new Uri(@"\images\1024x1024_NxtPtvTrackGlow.png", UriKind.Relative));
+        }
+
+        private void btnNext_MouseLeave(object sender, MouseEventArgs e)
+        {
+            imgBtnNext.Source = new BitmapImage(new Uri(@"\images\1024x1024_NxtPtvTrack.png", UriKind.Relative));
+        }
     }
 
     public class PlaceholderTextbox : TextBox

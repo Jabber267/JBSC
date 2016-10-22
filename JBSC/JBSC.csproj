@@ -170,14 +170,14 @@
     <Resource Include="images\800x600_ButtonMagnifyingGlassShadow.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\1024x1024_NxtPtvTrack.png" />
-    <Resource Include="images\1024x1024_NxtPtvTrackGlow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\1024x1024_Pause.png" />
     <Resource Include="images\1024x1024_PauseGlow.png" />
     <Resource Include="images\1024x1024_Play.png" />
     <Resource Include="images\1024x1024_PlayGlow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1024x1024_NxtPtvTrack.png" />
+    <Resource Include="images\1024x1024_NxtPtvTrackGlow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
