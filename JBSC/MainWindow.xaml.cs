@@ -27,10 +27,9 @@ namespace JBSC
             
             // Prevent app from covering the taskbar
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-
-
         }
 
+        #region Top Panel
         private void cvsTopPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -69,16 +68,6 @@ namespace JBSC
             // TODO: Add settins
         }
 
-        private void btnSearch_MouseEnter(object sender, MouseEventArgs e)
-        {
-            imgBtnSearch.Source = new BitmapImage(new Uri(@"\images\800x600_ButtonMagnifyingGlassShadow.png", UriKind.Relative));
-        }
-
-        private void btnSearch_MouseLeave(object sender, MouseEventArgs e)
-        {
-            imgBtnSearch.Source = new BitmapImage(new Uri(@"\images\800x600_ButtonMagnifyingGlass.png", UriKind.Relative));
-        }
-
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult msg = MessageBox.Show("TODO: Create search funtionality");
@@ -96,7 +85,9 @@ namespace JBSC
             MessageBoxResult msg = MessageBox.Show("TODO: Implement Undo/Previous");
             // TODO: Add back functionality
         }
+        #endregion
 
+        #region Control design etc.
         private void txbSearch_GotFocus(object sender, RoutedEventArgs e)
         {
             if (txbSearch.Text.ToLower() == "search")
@@ -116,7 +107,15 @@ namespace JBSC
                 this.Foreground = Brushes.Gray;
             }
         }
+        private void btnSearch_MouseEnter(object sender, MouseEventArgs e)
+        {
+            imgBtnSearch.Source = new BitmapImage(new Uri(@"\images\800x600_ButtonMagnifyingGlassShadow.png", UriKind.Relative));
+        }
 
+        private void btnSearch_MouseLeave(object sender, MouseEventArgs e)
+        {
+            imgBtnSearch.Source = new BitmapImage(new Uri(@"\images\800x600_ButtonMagnifyingGlass.png", UriKind.Relative));
+        }
         private void btnPrevious_MouseEnter(object sender, MouseEventArgs e)
         {
             imgBtnPrev.Source = new BitmapImage(new Uri(@"\images\1024x1024_NxtPtvTrackGlow.png", UriKind.Relative));
@@ -146,8 +145,11 @@ namespace JBSC
         {
             imgBtnNext.Source = new BitmapImage(new Uri(@"\images\1024x1024_NxtPtvTrack.png", UriKind.Relative));
         }
+        #endregion
+
     }
 
+    #region Custom textbox control
     public class PlaceholderTextbox : TextBox
     {
         bool isPlaceHolder = true;
@@ -203,5 +205,5 @@ namespace JBSC
             removePlaceHolder();
         }
     }
-
+    #endregion
 }

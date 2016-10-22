@@ -5,7 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JBSC"
         mc:Ignorable="d"
-        Title="Jabber SoundCloud Desktop Application" FontSize="11" MinWidth="800" MinHeight="600" WindowStyle="None" BorderBrush="#FFFF6800" Background="#FFFF6800" Height="600" Width="800">
+        Title="Jabber SoundCloud Desktop Application" 
+        FontSize="11" 
+        MinWidth="800" 
+        MinHeight="600" 
+        BorderBrush="#FFFF6800" 
+        Background="#FFFF6800" 
+        Height="600" 
+        Width="800" 
+        ResizeMode="NoResize" 
+        Icon="1024x1024_JBSC_Icon.ico" 
+        WindowStyle="None">
     <Grid x:Name="grdMain" Background="White" Margin="0">
         <Grid.RowDefinitions>
             <!--Top Panel-->
@@ -184,6 +194,7 @@
                 <ColumnDefinition Width="170*" MaxWidth="400" MinWidth="170"/>
                 <ColumnDefinition Width="622*"/>
             </Grid.ColumnDefinitions>
+            <ProgressBar x:Name="pgbTrackProgress" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" Grid.ColumnSpan="2" Value="50"/>
             <Grid x:Name="grdTrackControl" Grid.Row="2" MinWidth="170" MaxWidth="400">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -194,7 +205,7 @@
                     <Image x:Name="imgBtnPrev" Source="images/1024x1024_NxtPtvTrack.png"/>
                 </Button>
                 <Button x:Name="btnPausePlay" Style="{DynamicResource CstmBtnNoHighlight}" BorderThickness="0" MinWidth="30" MinHeight="30" Grid.Column="1" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" MouseEnter="btnPausePlay_MouseEnter" MouseLeave="btnPausePlay_MouseLeave">
-                    <Image x:Name="imgBtnPP" Source="images/1024x1024_Play.png"/>
+                    <Image x:Name="imgBtnPP" Source="images/1024x1024_Play.png" Margin="0"/>
                 </Button>
                 <Button x:Name="btnNext" Style="{DynamicResource CstmBtnNoHighlight}" Margin="0" BorderThickness="0" MinWidth="30" MinHeight="30" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseEnter="btnNext_MouseEnter" MouseLeave="btnNext_MouseLeave">
                     <Image x:Name="imgBtnNext" Source="images/1024x1024_NxtPtvTrack.png" RenderTransformOrigin="0.5,0.5">
